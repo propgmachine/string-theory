@@ -2,14 +2,116 @@
  * YOUR CODE HERE *
  ******************/
 
+function onlyVowels(str) {
+  let output = '';
+  for (const char of str) {
+    const lowerCaseChar = char.toLowerCase();
+    if (
+      lowerCaseChar === 'a' ||
+      lowerCaseChar === 'e' ||
+      lowerCaseChar === 'o' ||
+      lowerCaseChar === 'u' ||
+      lowerCaseChar === 'i' 
+    ) {
+      output += char;
+    }
+  }
+  return output;
+}
+
+function crazyCase(str) {
+  let output = '';
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    if (i % 2 === 0) {
+      output += char.toLowerCase();
+    }
+  
+    else {
+      output += char.toUpperCase();  
+    }
+  }
+  return output;
+}
+
+function titleCase(str) {
+  let output = '';
+  let shouldCapitalizeNextLetter = true;
+  for (const char of str) {
+
+    
+    
+    if (shouldCapitalizedNextLetter) {
+      output += char.toUpperCase();
+    } 
+
+
+    else {
+      output += char.toLowerCase();
+    }
+
+    if(char === ' ') {
+      shouldCapitalizeNextLetter = true;
+    } else {
+      shouldCapitalizeNextLetter = false;
+    }
+
+
+  }
+
+  return output;
+}
+
+function camelCase(str) {
+  let output = '';
+  let shouldCapitalizeNextLetter = false;
+  for (const char of str) {
 
 
 
+    if (char !== ' ') {
+      
+      if (shouldCapitalizeNextLetter) {
+      output += char.toUpperCase();
+    } else {
+      output += char.toLowerCase();
+    }
+  }
+  
+  //
+  //
+  //
+    if (char === ' ') {
+      shouldCapitalizeNextLetter = true;
+    } else {
+      shouldCapitalizeNextLetter = false; 
+    }
+  }
+
+  return output;
+}
+
+function crazyCase2ReturnOfCrazyCase(str) {
+  let output = '';
+  let shouldCapitalizeNextLetter = false;
+  for (const char of str) {
+
+  
+    if (shouldCapitalizeNextLetter) {
+      output += char.toUpperCase();
+    } else {
+      output += char.toLowerCase(); 
+    }
 
 
-
-
- /********************************************
+    if (char !== ' ') {
+      shouldCapitalizeNextLetter = !shouldCapitalizeNextLetter;
+    }
+  }
+  return output;
+} 
+/********************************************
  * CODE DOWN HERE IS FOR INTERNAL USE ONLY. *
  *           PLEASE DON'T TOUCH!            *
  ********************************************/

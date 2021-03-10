@@ -125,7 +125,7 @@ describe('reverse', () => {
   })
 })
 
-describe('onlyVowels', () => {
+describe.only('onlyVowels', () => {
   it(`returns only the vowels from a word`, () => {
     expect(onlyVowels('Colin Jaffe')).toBe('oiae');
     expect(onlyVowels('Mesuara Kaleziq')).toBe('euaaaei');
@@ -142,7 +142,7 @@ describe('onlyVowels', () => {
   })
 })
 
-describe('numberedChars', () => {
+describe.only('numberedChars', () => {
   it(`adds a 1 in parentheses before a one-character string`, () => {
     const char1 = 'a'
     const char2 = 'z'
@@ -164,7 +164,7 @@ describe('numberedChars', () => {
   })
 })
 
-describe('crazyCase', () => {
+describe.only('crazyCase', () => {
   it(`returns a string with every other letter uppercased`, () => {
     expect(crazyCase('hello')).toBe('hElLo')
     expect(crazyCase('you')).toBe('yOu')
@@ -181,7 +181,7 @@ describe('crazyCase', () => {
   })
 })
 
-describe('titleCase', () => {
+describe.only('titleCase', () => {
   it(`returns a transformed version of the given string where every word starts with a capital letter`, () =>{
     expect(titleCase('The matrix')).toBe('The Matrix');
     expect(titleCase('The matrix reloaded')).toBe('The Matrix Reloaded');
@@ -198,7 +198,7 @@ describe('titleCase', () => {
   })
 })
 
-describe('camelCase', () => {
+describe.only('camelCase', () => {
   it(`removes spaces from the given string`, () => {
     expect(camelCase('oh Hello')).toBe('ohHello');
     expect(camelCase('whats Up Dog')).toBe('whatsUpDog');
@@ -215,7 +215,7 @@ describe('camelCase', () => {
   })
 })
 
-describe('crazyCase2ReturnOfCrazyCase', () => {
+describe.only('crazyCase2ReturnOfCrazyCase', () => {
   it(`returns a string with every other letter uppercased`, () => {
     expect(crazyCase2ReturnOfCrazyCase('hello')).toBe('hElLo')
     expect(crazyCase2ReturnOfCrazyCase('you')).toBe('yOu')
